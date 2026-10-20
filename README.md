@@ -5,8 +5,7 @@ Cada archivo es independiente, corto y se ejecuta solo:
 
 ```bash
 python implementations/04_cache_aside.py
-python errors/02_cache_stampede_error.py
-python errors/02_cache_stampede_fix.py
+python errors/02_cache_stampede.py
 ```
 
 Los conceptos y el código son independientes del lenguaje: se usan
@@ -25,8 +24,7 @@ caching/
 │   ├── NN_nombre.py             el código
 │   └── NN_nombre.md             explicación + diagrama
 └── errors/
-    ├── NN_nombre_error.py       muestra el error
-    ├── NN_nombre_fix.py         la solución
+    ├── NN_nombre.py             el código con error + la solución
     └── NN_nombre.md             explicación + diagramas del error y del fix
 ```
 
@@ -42,8 +40,8 @@ Cada archivo empieza con un docstring con siempre las mismas secciones:
 
 | Archivo | Secciones |
 |---------|-----------|
-| `implementations/*` y `*_fix.py` | **Problema** · **Qué uso** · **Solución** · **Por qué** |
-| `*_error.py` | **Problema** · **Qué vas a ver** |
+| `implementations/*.py` | **Problema** · **Qué uso** · **Solución** · **Por qué** |
+| `errors/*.py` | **Problema** · **Solución** · **Por qué** |
 
 Debajo va el código mínimo para mostrarlo. La "DB" es un dict, con
 `time.sleep` donde importa que sea lenta y un contador `db_reads` para ver
@@ -81,5 +79,5 @@ cuántas veces se consultó.
 4. errores 02, 03, 04
 5. impl 03, 05, 06
 
-Para cada error: ejecutar el `_error.py`, pensar la solución, y recién
-después abrir el `_fix.py`.
+Para cada error: leer el `.md`, después el `.py` y ejecutarlo para ver la
+versión con error y la solución una al lado de la otra.
